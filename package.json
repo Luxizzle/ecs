@@ -2,8 +2,9 @@
     "name": "@colyseus/ecs",
     "version": "0.4.0-alpha.3",
     "description": "Entity Component System integration for Colyseus",
-    "main": "lib/index.js",
-    "types": "lib/index.d.ts",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
     "scripts": {
         "build": "rimraf dist/ && rollup -c rollup.config.mjs",
         "test": "mocha --require ts-node/register test/*Test.ts test/**/*Test.ts",
