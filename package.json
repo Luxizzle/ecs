@@ -12,7 +12,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/endel/ecs.git"
+        "url": "git+https://github.com/luxizzle/ecs.git"
     },
     "files": [
         "lib",
@@ -25,12 +25,14 @@
         "ecs",
         "colyseus"
     ],
-    "author": "Endel Dreyer",
+    "author": {
+        "name": "Luxizzle"
+    },
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/endel/ecs/issues"
+        "url": "https://github.com/luxizzle/ecs/issues"
     },
-    "homepage": "https://github.com/endel/ecs#readme",
+    "homepage": "https://github.com/luxizzle/ecs#readme",
     "devDependencies": {
         "@rollup/plugin-commonjs": "^19.0.1",
         "@rollup/plugin-node-resolve": "^13.0.2",
