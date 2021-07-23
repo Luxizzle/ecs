@@ -1,43 +1,50 @@
 {
-  "name": "@colyseus/ecs",
-  "version": "0.4.0-alpha.3",
-  "description": "Entity Component System integration for Colyseus",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "scripts": {
-    "test": "mocha --require ts-node/register test/*Test.ts test/**/*Test.ts",
-    "prepublish": "tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/endel/ecs.git"
-  },
-  "files": [
-    "lib",
-    "LICENSE",
-    "README.md"
-  ],
-  "keywords": [
-    "entity-component",
-    "system",
-    "ecs",
-    "colyseus"
-  ],
-  "author": "Endel Dreyer",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/endel/ecs/issues"
-  },
-  "homepage": "https://github.com/endel/ecs#readme",
-  "devDependencies": {
-    "@types/mocha": "^8.0.0",
-    "@types/node": "^14.0.25",
-    "mocha": "^8.0.1",
-    "ts-node": "^8.10.2",
-    "typescript": "^3.9.7"
-  },
-  "dependencies": {
-    "@colyseus/schema": "^1.0.0-alpha.39",
-    "ecsy": "^0.4.0"
-  }
+    "name": "@colyseus/ecs",
+    "version": "0.4.0-alpha.3",
+    "description": "Entity Component System integration for Colyseus",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+        "build": "rimraf dist/ && rollup -c rollup.config.mjs",
+        "test": "mocha --require ts-node/register test/*Test.ts test/**/*Test.ts",
+        "prepublish": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/endel/ecs.git"
+    },
+    "files": [
+        "lib",
+        "LICENSE",
+        "README.md"
+    ],
+    "keywords": [
+        "entity-component",
+        "system",
+        "ecs",
+        "colyseus"
+    ],
+    "author": "Endel Dreyer",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/endel/ecs/issues"
+    },
+    "homepage": "https://github.com/endel/ecs#readme",
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^19.0.1",
+        "@rollup/plugin-node-resolve": "^13.0.2",
+        "@rollup/plugin-typescript": "^8.2.3",
+        "@types/mocha": "^8.0.0",
+        "@types/node": "^14.0.25",
+        "mocha": "^8.0.1",
+        "rimraf": "^3.0.2",
+        "rollup": "^2.53.3",
+        "rollup-plugin-node-externals": "^2.2.0",
+        "ts-node": "^8.10.2",
+        "typescript": "^3.9.7"
+    },
+    "dependencies": {
+        "@colyseus/schema": "^1.0.0-alpha.39",
+        "ecsy": "^0.4.0"
+    }
 }
